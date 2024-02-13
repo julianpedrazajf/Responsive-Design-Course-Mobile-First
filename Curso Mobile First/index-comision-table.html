@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /*
+        1. Posicionamiento
+        2. Modelo de caja (Box model)
+        3. tipografia
+        4. Visuales 
+        5. Otros
+        */
+        :root {
+            /* Colores */
+            --bitcoin-orange: #f7931a;
+            --soft-orange: #FFE9D5;
+            --secondary-blue: #1A9AF7;
+            --soft-blue: #E7F5FF;
+            --warm-black: #201e1c;
+            --black: #282623;
+            --grey: #bababa;
+            --oof-white: #faf8f7;
+            --just-white: #fff;
+        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            font-size: 62.5%;
+            font-family: 'DM Sans', sans-serif;
+        }
+        header  {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 100%;
+            min-width: 320px;
+            height: 334px;
+            text-align: center;
+            background: linear-gradient(207.8deg, #201e1c 16.69%, #f7931a 100%);
+        }
+        header img {
+            width: 150px;
+            height: 24px;
+            margin-top: 60px;
+            align-self: center;
+        }
+        .header--title-container {
+            width: 90%;
+            min-width: 288px;
+            max-width: 900px;
+            height: 218px;
+            margin-top: 40px;
+            text-align: center;
+            align-self: center;
+        }
+        .header--title-container h1 {
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 2.6rem;
+            color: var(--just-white);
+        }
+        .header--title-container p {
+            margin-top: 25px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.8rem;
+            color: var(--soft-orange);
+        }
+        .header--title-container .header--button {
+            position: absolute;
+            left: calc(50% - 118px);
+            top: 270px;
+            display: block;
+            margin-top: 35px;
+            padding: 15px;
+            width: 229px;
+            height: 42px;
+            background-color: var(--oof-white);
+            /* Sombra*/
+            box-shadow: 0px 4px 8px rgba(89, 73, 30, 0.16);
+            border: none;
+            border-radius: 5px;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+            color: var(--black);
+        }
+        .header--button span {
+            display: inline-block;
+            width: 13px;
+            height: 8px;
+            margin-left: 10px;
+            background-image: url('./assets/assets/icons/down-arrow.svg');
+        }
+        main {
+            width: 100%;
+            height: auto;
+            background-color: var(--oof-white);
+        }
+        .main-exchange-container {
+            width: 100%;
+            height: auto;
+            padding-top: 80px;
+            padding-bottom: 30px;
+            text-align: center;
+        }
+        .main-exchange-container--title {
+            width: 90%;
+            min-width: 288px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .main-exchange-container .backgroundImg {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto;
+            margin-bottom: 50px;
+            background-image: url(./assets/assets/img/Bitcoin.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .main-exchange-container h2 {
+            margin-bottom: 30px;
+            font-size: 2.4rem;
+            font-weight: bold;
+            line-height: 2.6rem;
+            color: var(--black);
+        }
+        .main-exchange-container p {
+            margin-bottom: 30px;
+            font-size: 1.4rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+            color: #757575;
+        }
+        .main-currency-table {
+            width: 70%;
+            min-width: 235px;
+            max-width: 500px;
+            height: 360px;
+            margin: 0 auto;
+            font-family: "Inter", sans-serif;
+        }
+        .main-currency-table .currency-table--title {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            font-weight: bold;
+            line-height: 2.3rem;
+            color: var(--secondary-blue);
+        }
+        .currency-table--container {
+            width: 90%;
+            min-width: 230px;
+            max-width: 300px;
+            height: 250px;
+            margin: 0 auto;
+        }
+        .currency-table--container table {
+            width: 100%;
+            height: 100%;
+        }
+        .currency-table--container td {
+            width: 50%;
+            font-size: 1.6rem;
+            font-weight: 500;
+            line-height: 1.9rem;
+            color: var(--grey);
+            background-color: var(--just-white);
+        }
+        .currency-table--container .table__top-left {
+            border-radius: 15px 0 0 0;
+        }
+        .currency-table--container .table__top-right {
+            border-radius: 0 15px 0 0; 
+        }
+        .currency-table--container .table__bottom-left {
+            border-radius: 0 0 0 15px;
+        }
+        .currency-table--container .table__bottom-right {
+            border-radius: 0 0 15px 0;
+        }
+        .currency-table--container .table__right {
+            font-size: 1.4rem;
+            font-weight: normal;
+            line-height: 1.7rem;
+            color: #757575;
+        }
+        .currency-table--container .down {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-left: 10px;
+            background-image: url('./assets/assets/icons/trending-down.svg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .currency-table--container .up {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            margin-left: 10px;
+            background-image: url(./assets/assets/icons/trending-up.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="/assets/assets/img/logo.svg" alt="">
+        <div class="header--title-container">
+            <h1>The next revolution in cryptocurrency exchange</h1>
+            <p>Batatabit helps you navigate between different prices and trends.</p>
+            <a href="/" class="header--button">Learn about our plans <span></span></a>
+        </div>
+    </header>
+    <main>
+        <section class="main-exchange-container">
+            <div class="backgroundImg"></div>
+            <div class="main-exchange-container--title">
+                <h2>We make all exchange rates visible.</h2>
+                <p>We bring real-time information on exchange rates and the most important currencies in the world.</p>
+            </div>
+            <section class="main-tables-container">
+                <div class="main-currency-table">
+                    <p class="currency-table--title">Comision</p>
+                    <div class="currency-table--container">
+                        <table>
+                            <tr>
+                                <td class="table__top-left">Bitrade</td>
+                                <td class="table__top-right table__right">$12.96 <span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Bitpreco</td>
+                                <td class="table__right">$13.07 <span class="up"></span></td>
+                            </tr>
+                            <tr>
+                                <td>Novadax</td>
+                                <td class="table__right">$13.15 <span class="down"></span></td>
+                            </tr>
+                            <tr>
+                                <td class="table__bottom-left">Coinext</td>
+                                <td class="table__bottom-right table__right">$14.96 <span class="down"></span></td>
+                            </tr>
+                        </table>
+                        <div class="currency-table--date">
+                            <p><b> Update:</b>19 July 23:45</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section></section>
+        <section></section>
+        <section></section>
+    </main>
+    <footer></footer>
+</body>
+</html>
